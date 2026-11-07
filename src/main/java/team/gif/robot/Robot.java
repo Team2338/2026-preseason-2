@@ -4,10 +4,14 @@
 
 package team.gif.robot;
 
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
+import team.gif.robot.subsystems.IndexTal;
+import team.gif.robot.subsystems.NeoColSub;
+import team.gif.robot.subsystems.TalSuckSub;
 import team.gif.robot.subsystems.drivers.Pigeon2_0;
 
 
@@ -25,7 +29,10 @@ public class Robot extends TimedRobot {
 
     public static Pigeon2_0 pigeon;
 
+    public static TalSuckSub shoot = new TalSuckSub();
+    public static IndexTal collector = new IndexTal();
 
+    public static NeoColSub collect = new NeoColSub();
 
     public static UI ui;
 
@@ -44,6 +51,9 @@ public class Robot extends TimedRobot {
 
         pigeon = new Pigeon2_0(RobotMap.PIGEON_ID);
 
+        shoot = new TalSuckSub();
+        collector = new IndexTal();
+        collect = new NeoColSub();
 
 //        swerveDrive.addLimelight("limelight-front");
 
