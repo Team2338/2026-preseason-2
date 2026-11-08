@@ -23,6 +23,12 @@ public final class Constants {
 
 
 
+    public static final class Shooter {
+        public static final boolean INVERTED = true;
+        public static final double SHOOT_VOLTS = 6.0;
+        public static final double TOSS_VOLTS = 2.0;
+    }
+
     public static final class Joystick {
         public static final double DEADBAND = 0.1;
     }}

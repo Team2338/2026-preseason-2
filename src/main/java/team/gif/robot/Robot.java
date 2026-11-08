@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
+import team.gif.robot.subsystems.Shooter;
 import team.gif.robot.subsystems.drivers.Pigeon2_0;
 
 
@@ -24,6 +25,7 @@ public class Robot extends TimedRobot {
     public static OI oi;
 
     public static Pigeon2_0 pigeon;
+    public static Shooter shooter;
 
 
 
@@ -43,6 +45,8 @@ public class Robot extends TimedRobot {
         robotContainer = new RobotContainer();
 
         pigeon = new Pigeon2_0(RobotMap.PIGEON_ID);
+
+        shooter = new Shooter();
 
 
 //        swerveDrive.addLimelight("limelight-front");
