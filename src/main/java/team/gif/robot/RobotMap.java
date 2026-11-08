@@ -10,5 +10,7 @@ public abstract class RobotMap {
 
 
 
+    public static final int COLLECTOR_NEO = 62;
+
     public static final int PIGEON_ID = 9;
 }

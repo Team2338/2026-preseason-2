@@ -23,6 +23,11 @@ public final class Constants {
 
 
 
+    public static final class Collector {
+        public static final boolean INVERTED = true;
+        public static final double COLLECT_VOLTS = 5.5;
+    }
+
     public static final class Joystick {
         public static final double DEADBAND = 0.1;
     }}
