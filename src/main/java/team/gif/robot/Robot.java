@@ -12,6 +12,7 @@ import team.gif.robot.commands.drivetrain.ArcadeDrive;
 import team.gif.robot.subsystems.Collector;
 import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.Indexer;
+import team.gif.robot.subsystems.Shooter;
 import team.gif.robot.subsystems.drivers.Pigeon2_0;
 
 
@@ -31,6 +32,7 @@ public class Robot extends TimedRobot {
     public static DriveTrain driveTrain;
     public static Collector collector;
     public static Indexer indexer;
+    public static Shooter shooter;
 
 
 
@@ -56,6 +58,7 @@ public class Robot extends TimedRobot {
 
         collector = new Collector();
         indexer = new Indexer();
+        shooter = new Shooter();
 
 
 //        swerveDrive.addLimelight("limelight-front");

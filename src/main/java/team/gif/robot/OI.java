@@ -7,6 +7,8 @@ import team.gif.robot.commands.collector.Collect;
 import team.gif.robot.commands.drivetrain.ResetHeading;
 import team.gif.robot.commands.indexer.IndexFast;
 import team.gif.robot.commands.indexer.IndexSlow;
+import team.gif.robot.commands.shooter.Shoot;
+import team.gif.robot.commands.shooter.Toss;
 public class OI {
     /*
      * Instantiate all joysticks/controllers and their buttons here
@@ -97,6 +99,8 @@ public class OI {
         dRTrigger.whileTrue(new Collect());
         dA.whileTrue(new IndexFast());
         dY.whileTrue(new IndexSlow());
+        dX.whileTrue(new Shoot());
+        dB.whileTrue(new Toss());
 
 
 
