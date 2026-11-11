@@ -23,6 +23,14 @@ public final class Constants {
 
 
 
+    public static final class Drivetrain {
+        public static final boolean LEFT_INVERTED = false;
+        public static final boolean RIGHT_INVERTED = true;
+        public static final int CURRENT_LIMIT_AMPS = 50;
+        public static final double SPEED_PERCENT = 0.9;
+        public static final double SLEW_RATE_LIMIT = 1.5;
+    }
+
     public static final class Joystick {
         public static final double DEADBAND = 0.1;
     }}

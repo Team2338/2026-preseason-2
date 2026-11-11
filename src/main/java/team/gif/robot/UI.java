@@ -13,7 +13,7 @@ public class UI {
      *  and save file as "YYYY elastic-layout.json"
      */
     public UI() {
-        
+        Robot.pigeon.addToShuffleboard("Gyro");
     }
 
     /**
@@ -25,5 +25,10 @@ public class UI {
     public void update() {
         //Example
         //SmartDashboard.putNumber("Climber Position", Robot.elevator.getPosition())
+        SmartDashboard.putNumber("Heading", Robot.pigeon.getCompassHeading());
+        SmartDashboard.putNumber("Drive Left Position", Robot.driveTrain.getLeftPositionRotations());
+        SmartDashboard.putNumber("Drive Right Position", Robot.driveTrain.getRightPositionRotations());
+        SmartDashboard.putNumber("Drive Left Velocity", Robot.driveTrain.getLeftVelocityRPM());
+        SmartDashboard.putNumber("Drive Right Velocity", Robot.driveTrain.getRightVelocityRPM());
     }
 }
