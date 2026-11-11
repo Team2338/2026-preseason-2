@@ -36,6 +36,12 @@ public final class Constants {
         public static final double COLLECT_VOLTS = 5.5;
     }
 
+    public static final class Indexer {
+        public static final boolean INVERTED = true;
+        public static final double FAST_VOLTS = 6.7;
+        public static final double SLOW_VOLTS = 2.2;
+    }
+
     public static final class Joystick {
         public static final double DEADBAND = 0.1;
     }}

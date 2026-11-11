@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import team.gif.robot.commands.collector.Collect;
 import team.gif.robot.commands.drivetrain.ResetHeading;
+import team.gif.robot.commands.indexer.IndexFast;
+import team.gif.robot.commands.indexer.IndexSlow;
 public class OI {
     /*
      * Instantiate all joysticks/controllers and their buttons here
@@ -93,6 +95,8 @@ public class OI {
 
         dLStickBtn.and(dBack).onTrue(new ResetHeading().ignoringDisable(true));
         dRTrigger.whileTrue(new Collect());
+        dA.whileTrue(new IndexFast());
+        dY.whileTrue(new IndexSlow());
 
 
 
