@@ -13,5 +13,7 @@ public abstract class RobotMap {
     public static final int LEFT_SPARK_MAX = 16;
     public static final int RIGHT_SPARK_MAX = 11;
 
+    public static final int COLLECTOR_NEO = 62;
+
     public static final int PIGEON_ID = 9;
 }

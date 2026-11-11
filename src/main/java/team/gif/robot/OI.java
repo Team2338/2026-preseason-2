@@ -3,6 +3,7 @@ package team.gif.robot;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+import team.gif.robot.commands.collector.Collect;
 import team.gif.robot.commands.drivetrain.ResetHeading;
 public class OI {
     /*
@@ -91,6 +92,7 @@ public class OI {
          */
 
         dLStickBtn.and(dBack).onTrue(new ResetHeading().ignoringDisable(true));
+        dRTrigger.whileTrue(new Collect());
 
 
 

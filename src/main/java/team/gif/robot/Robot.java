@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
 import team.gif.robot.commands.drivetrain.ArcadeDrive;
+import team.gif.robot.subsystems.Collector;
 import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.drivers.Pigeon2_0;
 
@@ -27,6 +28,7 @@ public class Robot extends TimedRobot {
 
     public static Pigeon2_0 pigeon;
     public static DriveTrain driveTrain;
+    public static Collector collector;
 
 
 
@@ -49,6 +51,8 @@ public class Robot extends TimedRobot {
 
         driveTrain = new DriveTrain();
         driveTrain.setDefaultCommand(new ArcadeDrive());
+
+        collector = new Collector();
 
 
 //        swerveDrive.addLimelight("limelight-front");
