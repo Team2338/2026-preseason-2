@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 import team.gif.robot.commands.collector.Collect;
 import team.gif.robot.commands.drivetrain.ResetHeading;
 import team.gif.robot.commands.indexer.IndexFast;
+import team.gif.robot.commands.indexer.IndexReverse;
 import team.gif.robot.commands.indexer.IndexSlow;
 import team.gif.robot.commands.shooter.Shoot;
 import team.gif.robot.commands.shooter.Toss;
@@ -96,11 +97,17 @@ public class OI {
          */
 
         dLStickBtn.and(dBack).onTrue(new ResetHeading().ignoringDisable(true));
-        dRTrigger.whileTrue(new Collect());
-        dA.whileTrue(new IndexFast());
+        dLTrigger.whileTrue(new Collect());
+        dRTrigger.whileTrue(new Toss());
+        dRBump.whileTrue(new IndexFast());
         dY.whileTrue(new IndexSlow());
+        aLTrigger.whileTrue(new IndexSlow());
         dX.whileTrue(new Shoot());
         dB.whileTrue(new Toss());
+        aA.whileTrue(new IndexReverse());
+        aRBump.whileTrue(new IndexFast());
+        aLBump.whileTrue(new Collect());
+        aY.whileTrue(new Shoot());
 
 
 

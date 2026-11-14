@@ -4,9 +4,9 @@ import edu.wpi.first.wpilibj2.command.Command;
 import team.gif.robot.Constants;
 import team.gif.robot.Robot;
 
-public class IndexSlow extends Command {
+public class IndexReverse extends Command {
 
-    public IndexSlow() {
+    public IndexReverse() {
         super();
         addRequirements(Robot.indexer);
     }
@@ -16,7 +16,7 @@ public class IndexSlow extends Command {
 
     @Override
     public void execute() {
-        Robot.indexer.setVoltage(Constants.Indexer.SLOW_VOLTS);
+        Robot.indexer.setVoltage(Constants.Indexer.INDEXER_REVERSE);
     }
 
     @Override

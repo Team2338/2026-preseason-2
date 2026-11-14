@@ -33,18 +33,19 @@ public final class Constants {
 
     public static final class Collector {
         public static final boolean INVERTED = true;
-        public static final double COLLECT_VOLTS = 5.5;
+        public static final double COLLECT_VOLTS = -5.5;
     }
 
     public static final class Indexer {
         public static final boolean INVERTED = true;
         public static final double FAST_VOLTS = 6.7;
         public static final double SLOW_VOLTS = 2.2;
+        public static final double INDEXER_REVERSE = -3.5;
     }
 
     public static final class Shooter {
         public static final boolean INVERTED = true;
-        public static final double SHOOT_VOLTS = 6.0;
+        public static final double SHOOT_VOLTS = 10.5;
         public static final double TOSS_VOLTS = 2.0;
     }
 

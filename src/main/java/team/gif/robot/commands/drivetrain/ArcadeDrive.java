@@ -22,10 +22,10 @@ public class ArcadeDrive extends Command {
 
     @Override
     public void execute() {
-        double speed = MathUtil.applyDeadband(-Robot.oi.driver.getLeftY(), Constants.Joystick.DEADBAND) * Constants.Drivetrain.SPEED_PERCENT;
+        double speed = MathUtil.applyDeadband(Robot.oi.driver.getLeftY(), Constants.Joystick.DEADBAND) * Constants.Drivetrain.SPEED_PERCENT;
         double rotation = MathUtil.applyDeadband(-Robot.oi.driver.getRightX(), Constants.Joystick.DEADBAND) * Constants.Drivetrain.SPEED_PERCENT;
-
-        Robot.driveTrain.driveArcade(speedLimiter.calculate(speed), rotation);
+        rotation = rotation * Math.abs(rotation);
+        Robot.driveTrain.driveArcade(speedLimiter.calculate(-speed), rotation);
     }
 
     @Override
